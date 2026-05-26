@@ -1,0 +1,659 @@
+:: StoryTitle
+咪咪喵喵與牠的產地
+
+
+:: StoryData
+{
+  "ifid": "A7B3C9D2-E4F5-6789-ABCD-EF0123456789",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "命名儀式",
+  "zoom": 1
+}
+
+
+:: hal.tracks {"position":"125,275","size":"100,100"}
+bgm_wind: audio/咪咪冒冒.mp3
+
+
+:: selection \{ {"position":"125,400","size":"100,100"}
+background: rgba(74,144,217,0.4);
+}
+
+
+:: 仁武區的霸主 {"position":"250,150","size":"100,100"}
+<span class="scene-tag">高雄市仁武區・晴天</span>
+
+<h2>仁武區的霸主</h2>
+
+<p>(print: $catname) 踩在圍牆上，居高臨下望著腳下幾隻瑟瑟發抖的小弟——那是牠一爪一爪打下來的江山，每一塊磚頭都有牠的氣息。</p>
+
+<div class="dialogue">
+<span class="char-name">小弟甲</span>（顫抖地）：「大哥，聽說最近這區有兩腳獸拿著奇怪的箱子在抓貓……我們要避一避嗎？」
+</div>
+
+<p>(print: $catname) 冷笑一聲，尾巴高高翹起，額頭上的「M」型斑紋在陽光下格外鮮明。</p>
+
+<div class="dialogue">
+<span class="char-name">(print: $catname)</span>：「在仁武，只有我抓兩腳獸的份，沒獸敢動我！」
+</div>
+<img src="images/passage1.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 你想怎麼做？—</p>
+
+[[🦁 繼續霸氣巡邏，讓全區都知道本大爺在！|蛋蛋的哀傷]]
+[[🍱 肚子餓了，先去吃路邊的罐罐再說……|蛋蛋的哀傷]]
+
+
+:: 命名儀式 {"position":"375,25","size":"100,100"}
+(track: 'bgm_wind', 'loop', true)
+
+(track: 'bgm_wind', 'playwhenpossible')
+
+<h2>咪咪喵喵與牠的產地</h2>
+<h3>— 高雄仁武到屏東的傳奇征途 —</h3>
+
+<p>在高雄仁武區的街頭巷尾，流傳著一隻貓的傳說。</p>
+
+<p>牠踩過每一片屋瓦，統治過每一條小巷。但旅程的開始，需要一個名字。</p>
+
+<hr>
+
+<p>在你繼續之前，請為這位傳奇人物賜名：</p>
+(if: (history:)'s length is 0)[
+(set: $catname to "喪彪")
+]
+
+<p>我們的英雄叫做：(print: $catname)</p>
+
+你想改個名字嗎？
+(link: "✏️ 幫牠取名字")[(set: $catname to (prompt: "請輸入貓咪的名字（預設：喪彪）", "喪彪"))前往 → [[仁武區的霸主]]]
+
+[[✅ 就叫喪彪，直接出發！|仁武區的霸主]]
+
+
+:: 屏東深夜大戰 {"position":"875,400","size":"100,100"}
+<span class="scene-tag">屏東街頭・午夜</span>
+
+<h2>屏東深夜大戰</h2>
+
+<p>深夜的屏東街頭，靜得只剩蟲鳴。</p>
+
+<p>然後，大山開口了。</p>
+
+<p>那聲吼震撼了整個社區，路燈都抖了一下，幾戶人家的燈瞬間亮起。黑霸的貓貓軍才剛探出頭——</p>
+
+<p>（print: $catname) 已經衝了過去。</p>
+
+<p>伊麗莎白圈這一次成了武器。牠低頭猛撞，透明的圓框框撞得貓軍東倒西歪，像保齡球打保齡瓶。大山在後方一個呼嚕，震得三隻貓同時躲到了矮牆後。</p>
+
+<p>黑霸退到了牆角，第一次感受到真正的恐懼。</p>
+
+<div class="dialogue">
+<span class="char-name">黑霸</span>（夾著尾巴）：「大哥……誤會……都是誤會……」
+</div>
+<img src="images/passage10.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 勝利在握，你要如何處置敵方？—</p>
+
+[[💥 徹底驅逐敵軍，讓他們永遠消失！|結局選擇]]
+[[👑 收編敵軍，建立新秩序！|結局選擇]]
+
+
+:: 屏東退休生活 {"position":"500,275","size":"100,100"}
+<span class="scene-tag">屏東公園・午後</span>
+
+<h2>屏東退休生活</h2>
+
+<p>(print: $catname) 躺在公園長椅上，微瞇著眼曬太陽。</p>
+
+<p>南國的風帶著木棉花的香氣，偶爾有麻雀在旁邊嘰嘰喳喳。牠告訴自己——這就是牠夢寐以求的退休生活，管他江湖恩怨。</p>
+
+<p>但漸漸地，牠發現了不對勁。</p>
+
+<p>這裡的貓都瘦骨嶙峋，眼神黯淡，連搶食都縮手縮腳。有幾隻躲在角落，身上有新舊不一的抓傷。</p>
+
+<p>某種東西在 (print: $catname) 胸口悄悄騷動——那是壓了很久的老大本能。</p>
+<img src="images/passage4.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 你的良心（和自尊）還在跳動…… —</p>
+
+[[🔥 還是忍不住想管閒事！|貓老大重出江湖？]]
+[[😴 繼續睡，天塌下來也不關我的事|結局A：平靜的餘生]]
+
+
+:: 山中霸主出現 {"position":"625,400","size":"100,100"}
+<span class="scene-tag">仁武郊區・黃昏山道</span>
+
+<h2>山中霸主出現</h2>
+
+<p>就在 (print: $catname) 準備放棄一切的瞬間——</p>
+
+<p>地面震動了。</p>
+
+<p>不是地震。是腳步聲。</p>
+
+<p>一隻體型異常巨大的山貓緩緩從樹影中走出，身上帶著野性的豹紋斑點，耳尖有一撮猞猁般的長毛。牠走到 (print: $catname) 面前，在夕陽的逆光中顯得像座移動的小山。</p>
+
+<p>牠的後腳踝，有一圈淡淡的舊疤。</p>
+
+<div class="dialogue">
+<span class="char-name">大山</span>（低沉而緩慢）：「大哥……你不記得我了嗎？當年你在山上，從捕獸夾裡救下的那隻貓。我長大了。」
+</div>
+
+<p>(print: $catname) 愣在原地，久久說不出話。</p>
+<img src="images/passage8.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 命運，從未拋棄你…… —</p>
+
+[[🤝 「好兄弟，幫我一個忙——跟我去屏東！」|貓貓遠征軍]]
+
+
+:: 第一場衝突 {"position":"375,400","size":"100,100"}
+<span class="scene-tag">屏東某條巷弄・深夜</span>
+
+<h2>第一場衝突</h2>
+
+<p>(print: $catname) 把礙事的羞恥圈蹭掉後昂首走在前頭，小炸緊緊跟在後面，幾乎踩著牠的腳印。</p>
+
+<p>貓貓軍的地盤在巷弄最深處，七八隻壯貓懶洋洋地圍坐成一圈。為首的，是一隻肥碩的純黑大貓，左耳有個V型缺口，臉上有道淺疤，黃綠色的眼睛往 (print: $catname) 身上掃了一圈——</p>
+
+<div class="dialogue">
+<span class="char-name">黑霸</span>（嗤之以鼻）：「哪來的老廢貓？連蛋蛋都沒有，還想來這裡出頭？」
+</div>
+
+<p>(print: $catname) 沒有說話，直接往前踏了一步。</p>
+
+<p>這場仗打得昏天暗地。 (print: $catname) 勇猛，但終究是一對多。貓海戰術把牠壓得喘不過氣。</p>
+
+<p>這一局，牠輸了。</p>
+<img src="images/passage6.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 一個人打不贏，得去找幫手…… —</p>
+
+[[🚌 暫時撤退，回高雄搬救兵！|重返高雄]]
+
+
+:: 結局A：平靜的餘生 {"position":"1250,150","size":"100,100"}
+<span class="scene-tag">屏東公園・永遠的午後</span>
+
+<div class="ending-title">結局 A</div>
+<span class="ending-badge">— 平靜的餘生 · Early End —</span>
+
+<p>(print: $catname) 在屏東公園的長椅上，度過了接下來的每一天。</p>
+
+<p>牠沒有成為英雄，沒有建立霸業，但牠學會了一件事——與自己和解，是貓生中最艱難也最重要的一課。</p>
+
+<p>偶爾，南風吹過來，帶著一點點高雄仁武的氣息。</p>
+
+<p>(print: $catname) 會微微睜開眼，想起那道圍牆，想起小弟們，想起那個意氣風發的自己——然後，牠會在南國的陽光下，打一個大大的、滿足的哈欠。</p>
+
+<p>有些江山，輸掉了也無所謂。</p>
+
+<p>能曬到太陽，就夠了。</p>
+<img src="images/end1.png" style="width:100%;">
+
+<div class="paw">🐾</div>
+
+<p style="text-align:center; color: var(--blue-glow); font-size:0.9em; opacity:0.7;">「不是每隻貓，都需要成為傳說。」</p>
+
+<hr>
+
+[[🔄 重新開始，走另一條路|命名儀式]]
+
+
+:: 結局B：屏東貓王 {"position":"1250,400","size":"100,100"}
+<span class="scene-tag">屏東市・傳說之始</span>
+
+<div class="ending-title">結局 B</div>
+<span class="ending-badge">— 屏東貓王 · True End —</span>
+
+<p>(print: $catname) 留在了屏東。</p>
+
+<p>牠帶著大山與小炸，在這座城市建立了一個前所未有的公平秩序——沒有欺壓，沒有搶奪，每隻貓都能在自己的地盤吃飽、睡足、曬太陽。</p>
+
+<p>黑霸低下頭，成了最賣力的守衛。小炸每天大聲宣揚大哥的威名，雖然戰力依舊趨近於零。大山只是靜靜地蹲在最高處，山一樣沉默地守著這一切。</p>
+<img src="images/end3.png" style="width:100%;">
+
+<div class="paw">🐾</div>
+
+<p style="text-align:center; color: var(--gold); font-size:0.95em;">「(print: $catname)，屏東最神聖的圓框框老大。」</p>
+
+<hr>
+
+[[🔄 重新開始，走另一條路|命名儀式]]
+
+
+:: 結局C：收復失地 {"position":"1250,275","size":"100,100"}
+<span class="scene-tag">高雄仁武・榮耀歸來</span>
+
+<div class="ending-title">結局 C</div>
+<span class="ending-badge">— 收復失地 · Heroic End —</span>
+
+<p>黎明的第一道光，照在了高雄仁武那道舊圍牆上。</p>
+
+<p>(print: $catname) 踩在牆頭，身後跟著大山——那個體型像小山的傳奇——還有小炸，以及來自屏東的新兄弟們。</p>
+
+<p>新老大看見這陣仗，罐罐滾落一地，小弟甲已經趴在地上認錯，爪子不停地在空中亂抓。</p>
+
+<div class="dialogue">
+<span class="char-name">小弟甲</span>（哭腔）：「大哥！我知道錯了！你是永遠的老大！」
+</div>
+
+<p>(print: $catname) 沒有說話，只是緩緩掃了一眼腳下的江山。</p>
+
+<p>此後，「(print: $catname)」這個名字，不再只屬於仁武一區——而是高屏兩地之間流傳的都市傳說，連兩腳獸路過也會壓低聲音：</p>
+
+<p style="text-align:center; font-style:italic; color: var(--gold);">「聽說有隻貓，帶著一個山一樣大的影子，統治了整個南台灣……」</p>
+<img src="images/end2.png" style="width:100%;">
+
+<div class="paw">🐾</div>
+
+<p style="text-align:center; color: var(--blue-glow); font-size:0.9em; opacity:0.8;">傳奇，從來不需要蛋蛋。</p>
+
+<hr>
+
+[[🔄 重新開始，走另一條路|命名儀式]]
+
+
+:: 結局選擇 {"position":"1000,400","size":"100,100"}
+<span class="scene-tag">屏東・黎明</span>
+
+<h2>命運的分叉口</h2>
+
+<p>戰鬥結束了。屏東的天空開始泛出魚肚白。</p>
+
+<p>(print: $catname) 站在那條巷弄的最高點，俯瞰著剛剛用爪子打下的這片土地。</p>
+
+<p>大山在身後沉默地守護，小炸在腳邊崇拜地仰望，就連被收編的黑霸，也低頭蹲在角落，不敢抬眼。</p>
+
+<p>未來，有無限的可能。</p>
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 你希望 (print: $catname) 的故事如何落幕？—</p>
+
+[[🏆 「這裡就是我的新江山。」稱霸屏東→|結局B：屏東貓王]]
+[[🏠 「是時候回家了。」帶著兄弟收復高雄→|結局C：收復失地]]
+
+
+:: 蛋蛋的哀傷 {"position":"375,150","size":"100,100"}
+<span class="scene-tag">某間動物醫院・命運之日</span>
+
+<h2>蛋蛋的哀傷</h2>
+
+<p>那是 (print: $catname) 貓生中最黑暗的一天。</p>
+
+<p>牠被關進了冰冷的鐵箱子，隨後是一陣天旋地轉的睡意——像整個世界都在緩緩下沉。</p>
+
+<p>醒來後，牠發現自己脖子上套著一個巨大的透明圓圈。最重要的是——牠最引以為傲的「男子氣概」，永遠消失了。</p>
+
+<div class="dialogue">
+<span class="char-name">(print: $catname)</span>（盯著牆角，久久沉默）：「……」
+</div>
+
+<p>(print: $catname) 第一次覺得貓生失去了目標。稱霸江湖？為了什麼？連最核心的驕傲都被兩腳獸拿走了。</p>
+
+<p>牠緩緩趴下，決定從今天起——放棄當老大，開始混吃等死。</p>
+<img src="images/passage2.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 天色漸暗，路邊有輛貨車停著，引擎溫熱…… —</p>
+
+[[😴 跳上大盒子（貨車）睡覺，今晚就在這了|陌生的南國]]
+
+
+:: 貓老大重出江湖？ {"position":"375,275","size":"100,100"}
+<span class="scene-tag">屏東街角・黃昏</span>
+
+<h2>貓老大重出江湖？</h2>
+
+<p>正當 (print: $catname) 不知所措時，一道細細的聲音從旁邊炸開——</p>
+
+<div class="dialogue">
+<span class="char-name">小炸</span>（眼睛閃閃發光）：「大哥！你脖子上的圓框框好酷喔！你是外星來的戰士嗎？！」
+</div>
+
+<p>是一隻長毛黑白幼貓，毛髮因為營養不良炸得像顆爆炸頭，體型只有 (print: $catname) 的三分之一，卻有著大得驚人的崇拜眼睛。</p>
+
+<p>(print: $catname) 嘴角抽動了一下。</p>
+
+<div class="dialogue">
+<span class="char-name">(print: $catname)</span>：「這叫恥辱圈……算了。小鬼，你為什麼全身髒兮兮的？」
+</div>
+
+<p>小炸的眼眶瞬間紅了，哭著說——牠的罐罐都被當地的「貓貓軍」搶走了，就連耳朵也被抓傷了，留下一個小缺口。</p>
+
+<p>(print: $catname) 靜靜聽完，尾巴緩緩豎起。</p>
+<img src="images/passage5.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 老大的血正在沸騰…… —</p>
+
+[[⚡ 「帶路，老子教教他們什麼叫規矩！」|第一場衝突]]
+
+
+:: 貓貓遠征軍 {"position":"750,400","size":"100,100"}
+<span class="scene-tag">某公車站牌前・正午</span>
+
+<h2>貓貓遠征軍</h2>
+
+<p>幾十隻貓集結在公車站牌下方。</p>
+
+<p>大山站在最後排，像一座移動的小山，把其他貓的影子都蓋住了。 (print: $catname) 站在最前面，伊麗莎白圈在陽光下閃著透明的光。</p>
+
+<p>路人紛紛停步，拿出手機拍照。有人開始直播——</p>
+
+<div class="dialogue">
+<span class="char-name">路人</span>：「這些貓在幹嘛？？在排隊搭公車嗎？！」
+</div>
+
+<p>就在這時，一輛跑車緩緩停在路邊。車窗搖下，露出一個戴著墨鏡、穿著時尚的年輕男人，手機都來不及放下。</p>
+
+<div class="dialogue">
+<span class="char-name">熱血富二代</span>：「哇操——這是在拍電影嗎？！我直接贊助你們專車！」
+</div>
+
+<p>於是，(print: $catname) 帶著大山、小炸，與一支前所未有的貓貓遠征軍，搭上了那輛前往屏東的豪華大巴。</p>
+
+<p>車窗外，高雄的天際線漸漸消失在後方。</p>
+<img src="images/passage9.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 決戰的時刻來了…… —</p>
+
+[[⚔️ 抵達屏東，發起總攻擊！|屏東深夜大戰]]
+
+
+:: 重返高雄 {"position":"500,400","size":"100,100"}
+<span class="scene-tag">高雄市仁武區・舊地重遊</span>
+
+<h2>重返高雄</h2>
+
+<p>(print: $catname) 搭著便車，帶著一身傷回到了仁武。</p>
+
+<p>熟悉的牆壁，熟悉的氣味——但就是哪裡不對。</p>
+
+<p>牠踩上舊圍牆，往下一望——原本的小弟們正圍繞著一個新老大，分食著昂貴的進口罐罐，臉上是 (print: $catname) 從沒見過的滿足神情。</p>
+
+<p>小弟甲抬起頭，愣了三秒，隨後尷尬地舔了舔爪子：</p>
+
+<div class="dialogue">
+<span class="char-name">小弟甲</span>：「(print: $catname) 哥……？你不是已經……圓寂了嗎？」
+</div>
+
+<p>背叛，比那場敗仗更刺骨。</p>
+<img src="images/passage7.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 天下之大，何處是家？—</p>
+
+[[😤 憤怒地離開，獨自回屏東！|山中霸主出現]]
+[[😔 在領地邊緣徘徊，感到絕望……|山中霸主出現]]
+
+
+:: 陌生的南國 {"position":"500,150","size":"100,100"}
+<span class="scene-tag">屏東市・正午烈日</span>
+
+<h2>陌生的南國</h2>
+
+<p>貨車的震動停止了。</p>
+
+<p>(print: $catname) 伸了個懶腰，跳下車廂——迎面而來的是屏東那毒辣卻帶著奇異溫度的陽光。空氣的味道不一樣，連風都帶著陌生的青草氣。</p>
+
+<p>路邊有隻本地老貓，懶洋洋地嚼著草根，瞄了牠一眼。</p>
+
+<div class="dialogue">
+<span class="char-name">本地老貓</span>：「少年仔，高雄來的？這區沒看過你喔。」
+</div>
+
+<p>(print: $catname) 這才驚覺——周圍全是陌生的氣息，陌生的建築，陌生的貓。</p>
+
+<p>牠，居然流浪到了屏東市。</p>
+<img src="images/passage3.png" style="width:100%;">
+
+<div class="paw">🐾 🐾 🐾</div>
+
+<p class="choice-label">— 接下來怎麼辦？—</p>
+
+[[😮‍💨 「既然我都快死了，就在這養老吧。」|屏東退休生活]]
+[[😤 「雖然蛋蛋沒了，但我老大的氣場還在！」|貓老大重出江湖？]]
+
+
+:: StoryScript [script]
+/**
+ * Harlowe Audio Library (HAL), by Chapel, v2.3.0
+ * for Harlowe 2.1.0 and higher
+ * Released under the Unlicense, and dedicated to the public domain.
+**/
+;!function(e){(jQuery.browser=jQuery.browser||{}).mobile=/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(e)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(e.substr(0,4))}(navigator.userAgent||navigator.vendor||window.opera),function(){"use strict";window.Fast={filter:function(e,t){for(var o=e.length,n=[],a=0;a<o;a++)t(e[a],a,e)&&n.push(e[a]);return n},forEach:function(e,t){for(var o=e.length,n=0;n<o;n++)t(e[n],n,e)},map:function(e,t){for(var o=e.length,n=new Array(o),a=0;a<o;a++)n[a]=t(e[a],a,e);return n},find:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return e[n]},findIndex:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return n;return-1},some:function(e,t){for(var o=e.length,n=0;n<o;n++)if(t(e[n],n,e))return!0;return!1}}}(),window.Chapel=window.Chapel||{},window.Chapel.options={preload:!0,loadDelay:0,muteOnBlur:!0,startingVol:.5,persistPrefs:!0,globalA:!0,showControls:!0,sidebarStartClosed:!0,volumeDisplay:!1,trackLoadLimit:500,totalLoadLimit:8e3,debug:!1},window.Chapel.debug=function(){Chapel.options.debug&&console.log.apply(null,arguments)},function(){"use strict";var n=$("tw-storydata"),o=/(.+?):(.+)/,t=/[\r\n]+/,a=/^["']/,r=/["']$/;function e(e){return Fast.map(Fast.filter(e.split(t),function(e){return e&&e.trim()&&e.includes(":")}),function(e){return e.trim()})}function i(e){return e.trim().replace(a,"").replace(r,"").trim()}function s(e){var t=e.match(o);return t instanceof Array?{key:i(t[1]),value:i(t[2])}:e}var u,l,c,p=n.find('tw-passagedata[name="hal.tracks"]'),d=null,p=(p.length&&(p=e(p.text()),u=[],l=[],Fast.forEach(p,function(e){var e=s(e);"string"==typeof e&&l.push(e),u.push([e.key,(e=e.value,Fast.map(e.split(","),i))])}),l.length&&console.error("Some track definitions could not be parsed:\n"+l.join("\n")+"\nPlease check these definitions and try again."),d=new Map(u)),n.find('tw-passagedata[name="hal.config"]')),m=null;function f(e){var t=n.attr("format-version");if(e)return t;var e=t.split("."),t=e[0],o=e[1],e=e[2],t=Number(t),o=Number(o);return[t=(t=Number.isNaN(t)?3:t)<1?3:t,o=Number.isNaN(o)?3:o,e=Number.isNaN(e)?0:e]}function h(){var e=f();return!(3<=e[0]&&3<=e[1])}function g(t){return function(){var e=[].slice.call(arguments).slice(1),e=t.apply(null,e);return"string"==typeof e||"boolean"==typeof e||"number"==typeof e?e:""}}p.length&&(p=e(p.text()),c={},Fast.forEach(Fast.map(p,function(e){return s(e)}),function(e){c[e.key]=e.value}),m=c),m&&Fast.forEach(Object.keys(m),function(e){var t=e,o=c[e],e=typeof Chapel.options[e];"boolean"==e?"true"===o?Chapel.options[t]=!0:"false"===o&&(Chapel.options[t]=!1):"number"==e?(o=Number(o),Number.isNaN(o)||(Chapel.options[t]=o)):"string"==e&&o&&(Chapel.options[t]=o)});var y=require("macros");if(window.Chapel=window.Chapel||{},window.Chapel.Macros={add:function(o){o&&"object"==typeof o&&Fast.forEach(Object.keys(o),function(e){var t;t=o[e=e],h()?y.add(e,g(t),y.TypeSignature.zeroOrMore(y.TypeSignature.Any)):y.add(e,"Any",g(t),y.TypeSignature.zeroOrMore(y.TypeSignature.Any))})}},window.Chapel.Get=Object.freeze({version:f(),isHarlowe3OrLater:3<=f()[0],storyTitle:n.attr("name"),IFID:n.attr("ifid"),useOldMacroAPI:h(),fromPassage:d}),Chapel.debug("Harlowe Version -> ",Chapel.Get.version.join(".")),Chapel.debug("Harlowe Major Version -> ",Chapel.Get.version[0]),Chapel.debug("Story Title -> ",Chapel.Get.storyTitle),Chapel.debug("Story IFID -> ",Chapel.Get.IFID),Chapel.Get.version[0]<2)throw new Error("The Harlowe Audio Library is only designed to work with Harlowe 2 and 3; you appear to be using Harlowe 1 or an otherwise invalid story format.","get.js -> initialization",176);Chapel.options.storagekey="%%hal-"+Chapel.Get.IFID+"-{"+Chapel.Get.storyTitle+"}",Chapel.debug("Storage Key -> ",Chapel.options.storagekey)}(),function(){"use strict";var t=Chapel.options,e=function(e,t){if(window.localStorage)try{e=""+e,"string"!=typeof t&&(t=JSON.stringify(t)),window.localStorage.setItem(e,t)}catch(e){console.error(e)}},o=function(e){if(window.localStorage)try{return e=""+e,window.localStorage.getItem(e)}catch(e){console.error(e)}},n=function(e){if(window.localStorage)try{e=""+e,window.localStorage.removeItem(e)}catch(e){console.error(e)}},a={loaded:[],classes:{},master:{volume:t.startingVol,mute:!1},groups:{playing:[],looping:[],custom:{}},mute:function(e){a.master.mute=!!e,$(document).trigger({type:":master-mute",mute:!!e})},isMuted:function(){return!!a.master.mute},volume:function(e){e=Number(e),Number.isNaN(e)||(1<e?e=1:e<0&&(e=0),a.master.volume=e),$(document).trigger({type:":master-volume",volume:e})},getVolume:function(){return a.master.volume},stopAll:function(){a.classes.Track&&Fast.forEach(a.classes.Track.list,function(e){e.stop()})},audioPlaying:function(){return!!a.groups.playing.length},savePrefs:function(){e(t.storagekey,a.master)},loadPrefs:function(){var e=o(t.storagekey);e&&"object"==typeof e&&e.hasOwnProperty("volume")&&"number"==typeof e.volume&&e.hasOwnProperty("mute")&&"boolean"==typeof e.volume&&(delete a.master,a.master=e)},clearPrefs:function(){n(t.storagekey)}},r={track:[":available",":loaded",":play",":stop",":mute",":volume"],master:[":master-mute",":master-volume"]};var i=r.track.concat(r.master);function s(e,t){if(!e||"string"!=typeof e||!e.trim())return null;e=Fast.filter(Fast.map(e.split(" "),function(e){return(e=":"!==(e=e.split(".")[0])[0]?":"+e:e)+".userland"}),function(e){return(t?i:r.track).includes(e)}).join(" ");return e&&e.trim()?e:null}a.data={parseEvent:s,bail:function(e){throw new Error(e,"audio.js -> bail()",140)}},a.on=function(e,t){t&&"function"==typeof t?(e=s(e,!0))&&$(document).on(e,t):console.error("Chapel.Audio.on() -> invalid callback")},a.one=function(e,t){t&&"function"==typeof t?(e=s(e,!0))&&$(document).one(e,t):console.error("Chapel.Audio.one() -> invalid callback")},a.off=function(e){(e=s(e,!0))&&$(document).off(e)},t.persistPrefs&&($(document).on(":master-mute",a.savePrefs),$(document).on(":master-volume",a.savePrefs)),$(document).on(":play",function(e){e.track.addToGroup("playing")}),$(document).on(":stop",function(e){e.track.removeFromGroup("playing")}),t.muteOnBlur&&$(window).on("blur",function(){a.isMuted()||(a.mute(!0),$(window).one("focus",function(){a.mute(!1)}))}),a.parseEvent=s,window.Chapel=window.Chapel||{},window.Chapel.Audio=a}(),function(){"use strict";var a=Chapel.Audio,o=a.data.pareEvent,r=a.data.bail,i=Chapel.options,t=$(document.createElement("div")).attr("id","audio-container").css("display","none").appendTo(document.body),s={aac:"audio/aac",caf:"audio/x-caf","x-caf":"audio/x-caf",mp3:'audio/mpeg; codecs="mp3"',mpeg:'audio/mpeg; codecs="mp3"',m4a:"audio/mp4",mp4:"audio/mp4","x-m4a":"audio/mp4","x-mp4":"audio/mp4",oga:"audio/ogg",ogg:"audio/ogg",opus:'audio/ogg; codecs="opus"',wav:"audio/wav",wave:"audio/wav",weba:"audio/webm",webm:"audio/webm"};function u(e,t,o){this instanceof u||r("Track: called without `new` operator"),e||r("Track: no id specified"),"string"!=typeof e&&r("Track: track id is not a string"),t&&(!Array.isArray(t)||t.length)||r("Track: no sources specified"),o?t=[].slice.call(arguments).slice(1):"string"==typeof t&&(t=[t]);var n=$(document.createElement("audio"));Fast.forEach(t,function(e){$(document.createElement("source")).attr({src:e,type:(e=(e=(e=(e=(e=e).split("."))[e.length-1]).includes("?")?e.split("?")[0]:e).toLowerCase().trim(),Object.keys(s).includes(e)||r('Track: unsupported file type "'+e+'"'),s[e])}).appendTo(n)}),n.attr({"data-track":"id","data-volume":1,"data-mute":!1}).one("canplaythrough.hal",function(){a.loaded.push(e)}),i.preload&&n.attr("preload","auto"),n[0].volume=+a.master.volume,this.id=e,this.$el=n,this.unwrap=n[0],this.sources=t}Object.assign(u,{list:[],is:function(e){return e instanceof u},has:function(t){return Fast.some(u.list,function(e){return e.id===t})},emit:function(e,t){$(document).trigger({type:e,track:t}),t.emit(e)},add:function(e,t,o){var n=new u(e,t=o?[].slice.call(arguments).slice(1):t);return u.list.push(n),n.$el.on("canplay",function(){u.emit(":available",n)}),n.$el.on("canplaythrough",function(){u.emit(":loaded",n)}),n.attach(),n},renew:function(){Fast.forEach(u.list,function(e){e.mute(e.isMuted()),e.volume(e.getVolume())})},getIdx:function(t){return Fast.findIndex(u.list,function(e){return e.id===t})},get:function(t){var e=Fast.find(u.list,function(e){return e.id===t});if(e)return e;throw new ReferenceError('There is no track with the id "'+t+'". Please check your spelling and capitalization.',"track.js -> Track.get()",155)},removeFromDOM:function(e){(e="string"==typeof e?u.get(e):e)&&u.is(e)?e.unattach():t.remove()},_runOnMultiple:function(e,t,o){e instanceof Array&&u.prototype.hasOwnProperty(t)&&Fast.forEach(e,function(e){(e=u.is(e)?e:u.get(e)||null)&&e[t].apply(e,o&&o instanceof Array?o:[])})}}),Object.assign(u.prototype,{constructor:u,emit:function(e){this.$el.trigger({type:e,track:this})},clone:function(){return new u(this.id,this.sources)},isAttached:function(){return $.contains(t[0],this.unwrap)},attach:function(){return this.isAttached()||this.$el.appendTo(t),this},unattach:function(){return this.isAttached()&&this.$el.remove(),this},isPlaying:function(){return!this.unwrap.paused},play:function(){var e=this;return this.unwrap.play(),u.emit(":play",this),this.$el.on("ended",function(){e.unwrap.loop||(e.unwrap.currentTime=0,u.emit(":stop",e))}),this},playWhenPossible:function(){var t=this;return this.unwrap.play().then(function(){u.emit(":play",t),t.$el.on("ended",function(){t.unwrap.loop||(t.unwrap.currentTime=0,u.emit(":stop",t))})},function(e){$(document).one("click mousedown keydown touchstart",function(){t.play()})}).catch(function(e){console.error(e)}),this},forcePlay:function(){var e=this,t=$(document.createElement("a")).css("display","none").appendTo(document.body).on("click",function(){e.play()});setTimeout(function(){t.trigger("click")},safeAudioStart)},pause:function(){return this.unwrap.pause(),u.emit(":pause",this),this},stop:function(){return this.unwrap.pause(),this.unwrap.currentTime=0,u.emit(":stop",this),this},mute:function(e){return this.$el.attr("data-mute",e=!!e),a.master.mute?this.unwrap.muted=!0:this.unwrap.muted=e,u.emit(":mute",this),this},isMuted:function(){var e=this.$el.attr("data-mute");return"boolean"==typeof e?e:"false"!==e},toggleMute:function(){return this.mute(!this.isMuted()),this},volume:function(e){return e=Number(e),Number.isNaN(e)||(1<e?e=1:e<0&&(e=0),this.$el.attr("data-volume",e),this.unwrap.volume=e*a.master.volume),u.emit(":volume",this),this},getVolume:function(){return Number(this.$el.attr("data-volume"))},addToGroup:function(e,t){var o=this,t=(t?a.groups.custom:a.groups)[e];return Fast.some(t,function(e){return o.id===e.id})||t.push(this),this},removeFromGroup:function(e,t){var o=this,t=(t?a.groups.custom:a.groups)[e],e=Fast.findIndex(t,function(e){return e.id&&e.id===o.id});return t.splice(e,1),this},loop:function(e){return this.unwrap.loop=!!e,this.unwrap.loop?this.addToGroup("looping"):this.removeFromGroup("looping"),this},isLooping:function(){return!!this.unwrap.loop},toggleLoop:function(){return this.loop(!this.isLooping()),this},seek:function(e){return e<0?e=this.unwrap.duration-e:e>this.unwrap.duration&&(e=this.unwrap.duration),this.unwrap.currentTime=e,this},fadeIn:function(e){var t=this,o=(e=e||1,this.getVolume());return this.volume(0),this.play(),this.$el.animate({volume:o*a.master.volume},1e3*e,function(){t.volume(o),u.emit(":volume",t),u.emit(":fade",t)}),this},fadeOut:function(e){e=e||1;var t=this,o=this.getVolume();return this.$el.animate({volume:0},1e3*e,function(){t.stop(),t.volume(o),u.emit(":volume",t),u.emit(":fade",t)}),this},fadeTo:function(e,t){var o=this;if(e=e||1,t=Number(t),!Number.isNaN(t))return 1<t?t=1:t<0&&(t=0),this.$el.animate({volume:t*a.master.volume},1e3*e,function(){o.volume(t),u.emit(":volume",o),u.emit(":fade",o)}),this;alert("ivalid volume level")},delay:function(e,t){var o=this;"function"==typeof t&&(e=Number(e),(Number.isNaN(e)||e<0)&&(e=0),setTimeout(function(){t.call(o,o,e)},e))},on:function(e,t){if(!t||"function"!=typeof t)return console.error("<track>.on() -> invalid callback"),this;(e=o(e))&&this.$el.on(e,t)},one:function(e,t){if(!t||"function"!=typeof t)return console.error("<track>.one() -> invalid callback"),this;(e=o(e))&&this.$el.one(e,t)},off:function(e){(e=o(e))&&this.$el.off(e)}}),a.classes.Track=u,a.newTrack=function(){try{return u.add.apply(null,arguments)}catch(e){console.error(e.message),alert("Error in A.newTrack() -> see the console for more information.")}},a.track=function(e){try{return u.get(e)}catch(e){console.error(e.message),alert("Error in A.track() -> see the console for more information.")}},$(document).on(":master-mute",u.renew),$(document).on(":master-volume",u.renew)}(),function(){"use strict";var n=Chapel.Audio,a=n.classes.Track,o=(n.data._extend,/(play)?list:(.+)/i);n.createGroup=function(e,t,o){o=o?[].slice.call(arguments).slice(1):t;t=e,(e=o)&&Array.isArray(e)||(e=[]),n.groups.custom[t]=Fast.map(e,function(e){return a.get(e)})},n.group=function(e){if(!(this instanceof n.group))return new n.group(e);if(Object.keys(n.groups.custom).includes(e))this.members=n.groups.custom[e];else{if(!(n.groups[e]&&n.groups[e]instanceof Array))throw new ReferenceError('There is no group with the id "'+id+'". Please check your spelling and capitalization.',"group.js -> A.group()",29);this.members=n.groups[e]}var t;o.test(e)&&(t=e.match(o)[2])&&t.trim()&&(this.members=n.playlist(t).tracks),Array.isArray(this.members)||(this.members=[],console.error('Could not find members for track group "'+e+'"!'))},Object.assign(n.group,{is:function(e){return this instanceof n.group},_runOnAll:function(e,t,o,n){null!=n?o=[].slice.call(arguments).slice(2):o instanceof Array||(o=[o]);n=[e.members,t,o];a._runOnMultiple.apply(null,n)}}),Object.assign(n.group.prototype,{constructor:n.group,_run:function(){n.group._runOnAll.apply(null,[this].concat([].slice.call(arguments)))},play:function(){return this._run("play"),this},pause:function(){return this._run("pause"),this},stop:function(){return this._run("stop"),this},mute:function(e){return this._run("mute",e),this},volume:function(e){return this._run("volume",e),this},loop:function(e){return this._run("loop",e),this}})}(),function(){"use strict";var e=Chapel.Audio,a=e.classes.Track;e.data._extend;function n(e,t){if(!(this instanceof n))return new n(e,t);this.id=e,this.tracks=t.map(function(e){return a.get(e)}),this.looping=!1,this.current="",this.playing=!1}Object.assign(n,{list:{},is:function(e){return e instanceof n},add:function(e,t,o){return o&&(t=[].slice.call(arguments).slice(1)),n.list[e]=new n(e,t),n.list[e]},_runOnAll:function(e,t,o,n){null!=n?o=[].slice.call(arguments).slice(2):o instanceof Array||(o=[o]);n=[e.tracks,t,o];a._runOnMultiple.apply(null,n)}}),Object.assign(n.prototype,{constructor:n,clone:function(){return new n(this.id,this.tracks.map(function(e){return e.id}))},_run:function(){n._runOnAll.apply(null,[this].concat([].slice.call(arguments)))},volume:function(e){return this._run("volume",e),this},mute:function(e){return this._run("mute",e),this},shuffle:function(){for(var e,t,o=this.tracks,n=o.length-1;0<n;n--)e=Math.floor(Math.random()*(n+1)),t=o[n],o[n]=o[e],o[e]=t;return this.tracks=o,this},random:function(){return this.tracks[Math.floor(Math.random()*this.tracks.length)]},isPlaying:function(){return this.playing},nowPlaying:function(){return a.get(this.current)},play:function(e){var t=this;if((e=e||(t.current?Fast.findIndex(t.tracks,function(e){return e.id===t.current}):0))>=t.tracks.length&&t.looping)e=0;else if(e>=t.tracks.length)return t.current="",void(t.playing=!1);var o=t.tracks[e],n=o.isLooping();return o.loop(!1),o.play(),t.playing=!0,setTimeout(function(){o.isPlaying()||(t.playing=!1)},20),t.current=o.id,o.$el.one("ended.playlist",function(){e++,o.loop(n),t.play(e)}),t},loop:function(e){return this.looping=!!e,this},isLooping:function(){return this.looping},stop:function(){var e;return this.current&&this.isPlaying()?(e=this.nowPlaying())&&(e.stop(),e.$el.off(".playlist")):this._run("stop"),this.current="",this.playing=!1,this},pause:function(){var e;return this.current&&this.isPlaying()&&((e=this.nowPlaying())&&e.pause()),this.playing=!1,this}}),e.classes.Playlist=n,e.createPlaylist=function(){try{n.add.apply(null,arguments)}catch(e){console.error(e.message),alert("Error in A.createPlaylist() -> see the console for more information.")}},e.playlist=function(e){try{var t=n.list[e]||null;if(t)return t;throw new ReferenceError('There is no playlist with the id "'+e+'". Please check your spelling and capitalization.',"list.js -> A.playlist()",171)}catch(e){console.error(e.message),alert("Error in A.createPlaylist() -> see the console for more information.")}}}(),function(){"use strict";var t=Chapel.Audio,o=t.classes.Track,n=t.classes.Playlist;function a(t,o){if("object"!=typeof o)throw new TypeError("Invalid extension.","extensions.js -> _extend()",8);Fast.forEach(Object.keys(o),function(e){if(void 0!==t[e])throw new Error('Invalid extension: cannot clobber existing property "'+e+'".',"extensions.js -> _extend()",8);t[e]=o[e]})}t.extend=function(e){a(Audio,e)},o.extend=function(e){a(o,e)},o.extendPrototype=function(e){a(o.prototype,e)},t.extendTrack=o.extend,t.extendTrackProto=o.extendPrototype,t.group.extend=function(e){a(t.group,e)},t.group.extendPrototype=function(e){a(t.group.prototype,e)},t.extendGroup=t.group.extend,t.extendGroupProto=t.group.extendPrototype,n.extend=function(e){a(n,e)},n.extendPrototype=function(e){a(n.prototype,e)},t.extendPlaylist=n.extend,t.extendPlaylistProto=n.extendPrototype}(),function(){"use strict";var e,t,o,n,a,r,i,s=Chapel.options;s.showControls&&(e=$(document.createElement("div")).attr("id","story-menu").css("display","none"),t=$(document.createElement("span")).attr("id","vol-title").append("Volume"),s.volumeDisplay||t.css("display","none"),o=$(document.createElement("input")).attr({id:"audio-volume",type:"range",min:1,max:99,step:1,title:"Volume"}).addClass("hal"),(a=Math.trunc(100*window.Chapel.Audio.master.volume))<0?a=0:100<a&&(a=100),o.attr("value",a),n=function(e){void 0===e&&(e=o.val()),t.empty().append("Volume "+e)},o.on("input",function(){window.Chapel.Audio.volume($(this).val()/100),n($(this).val())}),a=$(document.createElement("tw-link")).attr({id:"audio-mute",title:"Mute"}).append("Mute <span></span>").on("click",function(e){e.preventDefault(),$(this).toggleClass("muted"),Chapel.Audio.mute(!Chapel.Audio.isMuted())}),Chapel.Audio.isMuted()&&a.addClass("muted"),r=$(document.createElement("tw-link")).attr("id","audio-panel-toggle").on("click",function(e){e.preventDefault(),i.toggleClass("closed")}),i=$(document.createElement("div")).attr("id","audio-controls").append(e,t,o,a,r).appendTo(document.body),s.sidebarStartClosed&&i.addClass("closed"),window.Chapel=window.Chapel||{},window.Chapel.Audio=window.Chapel.Audio||{},window.Chapel.Audio.controls={$panel:i,$volume:o,$mute:a,$user:e,close:function(){i.addClass("closed")},open:function(){i.removeClass("closed")},toggle:function(){i.toggleClass("closed")},hide:function(){i.css("display","none")},show:function(){i.css("display","block")},updateVolume:n})}(),function(){"use strict";var s=Chapel.options,t=State,e=$(document.createElement("div")).attr("id","audio-overlay").css("display","none").appendTo(document.body);function o(){e.css("display","block").append('<div class="lds-ring"><div></div><div></div><div></div><div></div></div>')}function u(){e.fadeOut(function(){e.empty()})}window.Chapel=window.Chapel||{},window.Chapel.Audio=window.Chapel.Audio||{},window.Chapel.Audio.loadScreen={show:o,dismiss:u,kill:function(){$("#audio-overlay").remove()}},window.Chapel.Audio.$overlay=e,window.Chapel.Audio.preload=function(){var a,e,r,i;Chapel.debug("This is a mobile browser -> ",$.browser.mobile),t.pastLength||t.futureLength||$.browser.mobile||($(document).ready(function(){o()}),a=100+s.loadDelay,e=Chapel.Audio.classes.Track.list,r=Chapel.Audio.loaded,e.length?(i=Fast.map(e,function(e){return e.id}),0<s.totalLoadLimit&&setTimeout(function(){u()},s.totalLoadLimit),function e(){var t,o,n;i.length?(t=i.shift(),r.includes(t)?e():(o=Chapel.Audio.classes.Track.get(t)).unwrap.readyState<2?(n=!1,o.$el.one("canplaythrough.hal",function(){e(),n=!0}),setTimeout(function(){n||(o.$el.off("canplaythrough.hal"),e())},s.trackLoadLimit)):(r.includes(t)||r.push(t),e())):setTimeout(u,a)}()):setTimeout(u,a))}}(),function(){"use strict";var e,t,o=Chapel.options.storagekey+"_hal_restart_",n=(Chapel.debug("HAL Session Key -> ",o),window.sessionStorage?(Chapel.debug("Session Storage Available"),e=function(e,t){window.sessionStorage.setItem(o+e,t)},t=function(e){return window.sessionStorage.getItem(o+e)}):(Chapel.debug("Session Storage Unavailable"),e=function(){},t=function(){},console.warn("Session storage is unavailable...")),{save:e,load:t});window.Chapel.Audio.state={_store:n,saveTracks:function(){var e;try{e=Fast.map(Chapel.Audio.classes.Track.list,function(e){return{id:e.id,sources:e.sources}}),Chapel.debug("Session Saved (Tracks) -> ",e),e=JSON.stringify(e),n.save("tracks",e)}catch(e){console.error(e.message)}},loadTracks:function(){var e;try{e=(e=n.load("tracks"))&&JSON.parse(e),Array.isArray(e)&&e.length&&(Chapel.debug("Session Loaded (Tracks) -> ",e),Fast.forEach(e,function(e){e.id&&e.sources&&!Chapel.Audio.classes.Track.has(e.id)?Chapel.Audio.newTrack.apply(null,[e.id].concat(e.sources)):Chapel.debug("Track reloading skipped.")}))}catch(e){console.error(e.message)}},savePlaylists:function(){try{var o=Chapel.Audio.classes.Playlist.list,e=Fast.map(Object.keys(o),function(e){var t={};return t.tracks=Fast.map(o[e].tracks,function(e){return e.id}),t.id=o[e].id,t});Chapel.debug("Session Saved (Playlists) -> ",e),e=JSON.stringify(e),n.save("playlists",e)}catch(e){console.error(e.message)}},loadPlaylists:function(){var e;try{(e=(e=n.load("playlists"))&&JSON.parse(e))&&Array.isArray(e)&&e.length&&(Chapel.debug("Session Loaded (Playlists) -> ",e),Fast.forEach(e,function(e){e.id&&e.tracks&&Chapel.Audio.createPlaylist(e.id,e.tracks)}))}catch(e){console.error(e.message)}},saveGroups:function(){var t;try{t={},Fast.forEach(Object.keys(Chapel.Audio.groups.custom),function(e){t[e]=Fast.map(Chapel.Audio.groups.custom[e],function(e){return"string"==typeof e?e:e.id})}),Chapel.debug("Session Saved (Groups) -> ",t),t=JSON.stringify(t),n.save("groups",t)}catch(e){console.error(e.message)}},loadGroups:function(){var t;try{(t=(t=n.load("groups"))&&JSON.parse(t))&&"object"==typeof t&&(Chapel.debug("Session Loaded (Groups) -> ",t),Fast.forEach(Object.keys(t),function(e){Fast.map(t[e],function(e){return Chapel.Audio.classes.Track.get(e)})}),Chapel.Audio.groups.custom=t)}catch(e){console.error(e.message)}}}}(),function(){"use strict";var e=Chapel.options;e.globalA&&void 0===window.A&&(Chapel.debug("Created global A interface."),window.A=window.Chapel.Audio),Chapel.Get.fromPassage&&(Chapel.debug("Loading tracks from track def special passage -> ",Chapel.Get.fromPassage),Chapel.Get.fromPassage.forEach(function(e,t){Chapel.Audio.newTrack.apply(null,[t].concat(e))})),$(document).on("unload",function(){Chapel.debug("User Prefs Saved"),window.Chapel.Audio.savePrefs()}),Chapel.Audio.classes.Track.renew(),Chapel.Audio.controls&&Chapel.Audio.controls.updateVolume(),Chapel.Get.isHarlowe3OrLater&&($(window).on("unload",function(){Chapel.debug("HAL State Saved"),Chapel.Audio.state.saveTracks(),Chapel.Audio.state.savePlaylists(),Chapel.Audio.state.saveGroups()}),Chapel.debug("HAL State Loaded"),Chapel.Audio.state.loadTracks(),Chapel.Audio.state.loadPlaylists(),Chapel.Audio.state.loadGroups()),e.persistPrefs&&(Chapel.debug("User Prefs Loaded"),Chapel.Audio.loadPrefs())}(),function(){"use strict";var i,s,e,u,t;Chapel.options.showControls&&(i=Engine,s=Chapel.Audio.controls.$user,e=function(){return"none"!==s.css("display")},u=function(){return e()||s.css("display","block"),s},t=function(){return e()&&s.css("display","none"),s},Chapel.Audio.menu={hide:t,show:u,isShown:e,links:{add:function(e,t,o){var n,a;if(!e||"string"!=typeof e)return r="undefined",alert(r),void console.error(r);o||"function"!=typeof t?(t&&"string"==typeof t&&(n=t),o&&"function"==typeof o&&(a=o)):(a=t,n=null);var r=$(document.createElement("tw-link")).append(e).attr({tabindex:"0",name:e.toLowerCase().trim()}).on("click",function(){n&&i.goToPassage(n),a&&a()}).addClass("story-menu").appendTo(s);return u(),r},clear:function(){return s.empty(),t()},hide:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').addClass("hide")},show:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').removeClass("hide")},toggle:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').toggleClass("hide")},remove:function(e){e=e.toLowerCase().trim(),$('tw-link.story-menu[name="'+e+'"]').remove()}}})}(),function(){"use strict";var n=Chapel.Audio;function o(e){return e&&"function"==typeof e}function a(e,t){if(!e||"string"!=typeof e)return null;switch(e=e.toLowerCase().trim()){case"isplaying":e="isPlaying";break;case"playwhenpossible":e="playWhenPossible";break;case"ismuted":e="isAMuted";break;case"togglemute":e="toggleMute";break;case"getvolume":e="getVolume";break;case"islooping":e="isLooping";break;case"toggleloop":e="toggleLoop";break;case"fadein":e="fadeIn";break;case"fadeout":e="fadeOut";break;case"fadeto":e="fadeTo";break;case"stopall":e="stopAll"}if("isPlaying"===e&&"master"===t&&(e="audioPlaying"),"group"===t){if(o(n.group.prototype[e]))return e}else if("master"===t){if(o(n[e]))return e}else if(o(n.classes[t].prototype[e]))return e;throw new ReferenceError('Cannot run the command: "'+e+'" on the API "'+t+'". The command may be invalid, or this may be a bug in HAL.',"macros.js -> getCommand()",10)}window.Chapel.Macros.add({newtrack:function(){var e=[].slice.call(arguments);try{return n.newTrack.apply(null,e)}catch(e){alert("Error in the (newtrack:) macro: "+e.message)}},newplaylist:function(e,t){t=[].slice.call(arguments).slice(1);try{return n.createPlaylist(e,t)}catch(e){alert("Error in the (newplaylist:) macro: "+e.message)}},newgroup:function(e,t){t=[].slice.call(arguments).slice(1);try{return n.createGroup(e,t)}catch(e){alert("Error in the (newgroup:) macro: "+e.message)}},masteraudio:function(e){try{return e=a(e,"master"),n[e].apply(null,[].slice.call(arguments).slice(1))}catch(e){alert("Error in the (masteraudio:) macro: "+e.message)}},track:function(e,t){try{var o=n.track(e);return o[t=a(t,"Track")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (track:) macro: "+e.message)}},playlist:function(e,t){try{var o=n.playlist(e);return o[t=a(t,"Playlist")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (playlist:) macro: "+e.message)}},group:function(e,t){try{var o=n.group(e);return o[t=a(t,"group")].apply(o,[].slice.call(arguments).slice(2))}catch(e){alert("Error in the (group:) macro: "+e.message)}}})}();
+/** End of HAL code */
+
+:: StoryStylesheet [stylesheet]
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=ZCOOL+XiaoWei&display=swap');
+
+/**
+ * Harlowe Audio Library (HAL), by Chapel, v2.3.0
+ * for Harlowe 2.1.0 and higher
+ * Released under the Unlicense, and dedicated to the public domain.
+**/
+#audio-overlay{position:fixed;top:0;right:0;left:0;bottom:0;z-index:100000;background:#111}.lds-ring{display:block;position:relative;top:20%;margin:auto;width:20em;height:20em}.lds-ring div{box-sizing:border-box;display:block;position:absolute;width:18em;height:18em;margin:6px;border:6px solid #fff;border-radius:50%;-webkit-animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;animation:lds-ring 1.2s cubic-bezier(.5,0,.5,1) infinite;border-color:#fff transparent transparent transparent}.lds-ring div:nth-child(1){-webkit-animation-delay:-.45s;animation-delay:-.45s}.lds-ring div:nth-child(2){-webkit-animation-delay:-.3s;animation-delay:-.3s}.lds-ring div:nth-child(3){-webkit-animation-delay:-.15s;animation-delay:-.15s}@-webkit-keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes lds-ring{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}input#audio-volume{width:100%;margin:2em 0}span#vol-title{position:relative;bottom:-1em;font-size:1rem;float:left}tw-link#audio-mute{display:inline-block;padding:.3em;width:90%;text-decoration:none;color:#111;background:#eee;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid #000}tw-link#audio-mute:hover{opacity:.8}tw-link#audio-mute:active{opacity:.6}tw-link#audio-mute span{display:inline-block;width:1em;position:relative;height:1em;top:.2em;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAABF0lEQVR4Ae2VJVREYRSEB3ftuFUaLhF6I22iF7TgLr1XvAc849CwiBac9Xtm3e97cefp/Pec7+mdH0mZrGtMoBomyAEHfjGHXKg07gNxeUS3BuMAqGZswE7YcOIYgqgG7BFlSQgTAgKysC2jNjQmghFQCOpMxq+QmQgmFATU4kcq/YlgfKB1lALUqFSukRIbEwpy4BTZPM/Bu9TaQ362KAsl56sAtSR+Sgv6RCFdr/gjBYiuj65c3J0eNEmXz95TgybocvmoJj3avf5l59L1iD/WglZCP7/uh8zgeQ6epdahaZENFIPCCFvEYNPW4JdNazBGzhkj6caCbSc02DRRu0+8RR/+rb7wx6D505HxCVKvG0zpp+yknHe8MBDkT/s8AAAAAElFTkSuQmCC);background-size:contain}tw-link#audio-mute.muted span{right:4px;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAASElEQVR4Ae3WsQ0AMAjAsJ7ez9MTGEmlRGL3BJzPq6prw2DDYMNgw2DDYMOwh1kAMUygQIEC2RejANVxnVE9aDOqJ39GVZWqB5Z3r1ndBX5oAAAAAElFTkSuQmCC)}div#audio-volume{float:left}div#audio-controls{font:100% Georgia,serif;font-size:1.5em;position:fixed;width:8em;height:100%;padding:1em 2em;z-index:10000;top:0;left:0;bottom:0;background:#333;color:#eee;transition:left .3s;text-align:center}div#audio-controls.closed{left:-10.5em}div#audio-controls tw-link#audio-panel-toggle{display:inline-block;width:1.5em;position:absolute;height:1.5em;top:0;right:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;text-decoration:none;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAYklEQVR4Ae3MsQFAMAAEQMDEagCgN4EuVTrbPcACeUBugDNeSdMQomI0PmYdTEYD9DA5jcVoBKuxGY1kNQ6jGRSaGaIj8gw1aI/KYVUSNqsSzMpiVT2zMjlVN0fqVW5o2luMGHqkQmD9cPYAAAAASUVORK5CYII=);background-size:contain}div#audio-controls.closed tw-link#audio-panel-toggle{background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAQAAABLCVATAAAAZElEQVR4Ae3TpwGAMBQAUfrEeHB0cDhcXBSO7ehlgBw9N8BL/YZO95r6uA/UEbOv+ylfHRJ9z1BWLynKJqmWohyS6ijKOygKCpmjZYqXTTA2xUiCsShGAMw8/Q3ArFgFMHek0w3WCaR74eO2YQAAAABJRU5ErkJggg==)}@media screen and (max-width:800px){div#audio-controls.closed{left:-12em}div#audio-controls.closed tw-link#audio-panel-toggle{right:-1.5em}}div#story-menu{margin:1em 0}tw-link.story-menu{width:100%;display:block;font-weight:400;background:#ccc;font-size:.9em;padding:.1em 0;color:#111;border:1px solid #333}tw-link.story-menu.hide{display:none}tw-link.story-menu:hover{opacity:.8}tw-link.story-menu:active{opacity:.6}input[type=range].hal{-webkit-appearance:none;width:100%;margin:2.25px 0}input[type=range].hal:focus{outline:0}input[type=range].hal::-webkit-slider-runnable-track{width:100%;height:15.5px;cursor:pointer;box-shadow:.4px .4px 1px #000,0 0 .4px #0d0d0d;background:#111;border-radius:0;border:0 solid #010101}input[type=range].hal::-webkit-slider-thumb{box-shadow:0 0 2.2px rgba(17,17,17,.1),0 0 0 rgba(30,30,30,.1);border:0 solid #fff;height:20px;width:11px;border-radius:0;background:rgba(255,255,255,.93);cursor:pointer;-webkit-appearance:none;margin-top:-2.25px}input[type=range].hal:focus::-webkit-slider-runnable-track{background:#444}input[type=range].hal::-moz-range-track{width:100%;height:15.5px;cursor:pointer;box-shadow:.4px .4px 1px #000,0 0 .4px #0d0d0d;background:#111;border-radius:0;border:0 solid #010101}input[type=range].hal::-moz-range-thumb{box-shadow:0 0 2.2px rgba(17,17,17,.1),0 0 0 rgba(30,30,30,.1);border:0 solid #fff;height:20px;width:11px;border-radius:0;background:rgba(255,255,255,.93);cursor:pointer}input[type=range].hal::-ms-track{width:100%;height:15.5px;cursor:pointer;background:0 0;border-color:transparent;color:transparent}input[type=range].hal::-ms-fill-lower{background:#000;border:0 solid #010101;border-radius:0;box-shadow:.4px .4px 1px #000,0 0 .4px #0d0d0d}input[type=range].hal::-ms-fill-upper{background:#111;border:0 solid #010101;border-radius:0;box-shadow:.4px .4px 1px #000,0 0 .4px #0d0d0d}input[type=range].hal::-ms-thumb{box-shadow:0 0 2.2px rgba(17,17,17,.1),0 0 0 rgba(30,30,30,.1);border:0 solid #fff;height:20px;width:11px;border-radius:0;background:rgba(255,255,255,.93);cursor:pointer;height:15.5px}input[type=range].hal:focus::-ms-fill-lower{background:#111}input[type=range].hal:focus::-ms-fill-upper{background:#444}
+/** End of HAL code */
+
+:root {
+  --blue-deep: #0a1628;
+  --blue-mid: #0d2b5e;
+  --blue-sky: #1a4a9e;
+  --blue-light: #4a90d9;
+  --blue-glow: #7ec8f0;
+  --gold: #f5c842;
+  --cream: #fdf6e3;
+  --red-accent: #e05c5c;
+  --white-soft: rgba(255,255,255,0.92);
+}
+
+tw-story {
+  background: linear-gradient(160deg, #020c1e 0%, #0a1e4a 30%, #0d3580 60%, #1a5fa0 85%, #2a8ccc 100%) !important;
+  min-height: 100vh;
+  font-family: 'Noto Serif TC', serif;
+  color: var(--cream);
+  position: relative;
+  overflow-x: hidden;
+}
+
+tw-story::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background:
+    radial-gradient(ellipse at 20% 80%, rgba(74,144,217,0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(126,200,240,0.12) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(10,22,40,0.3) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+tw-passage {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 36px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* 標題樣式 */
+h2 {
+  font-family: 'ZCOOL XiaoWei', 'Noto Serif TC', serif;
+  font-size: 1.6em; /* 原 2em -> 縮小後 1.6em */
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 0.3em;
+  text-shadow: 0 0 20px rgba(245,200,66,0.5), 0 2px 4px rgba(0,0,0,0.8);
+  letter-spacing: 0.08em;
+}
+
+h3 {
+  font-size: 0.88em; /* 原 1.1em -> 縮小後 0.88em */
+  color: var(--blue-glow);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.8em;
+  letter-spacing: 0.15em;
+  opacity: 0.85;
+}
+
+/* 敘事文字 */
+p {
+  font-size: 0.864em; /* 原 1.08em -> 縮小後 0.864em */
+  line-height: 2em;
+  color: var(--white-soft);
+  margin-bottom: 1.1em;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+}
+
+/* 對話框 */
+.dialogue {
+  background: rgba(13,43,94,0.65);
+  border-left: 3px solid var(--blue-glow);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 18px;
+  margin: 12px 0;
+  font-style: italic;
+  color: #d0eaff;
+}
+
+/* 場景標籤 */
+.scene-tag {
+  display: inline-block;
+  background: rgba(74,144,217,0.25);
+  border: 1px solid rgba(126,200,240,0.4);
+  border-radius: 20px;
+  padding: 3px 14px;
+  font-size: 0.624em; /* 原 0.78em -> 縮小後 0.624em */
+  color: var(--blue-glow);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.2em;
+}
+
+/* 分隔線 */
+hr {
+  border: none;
+  border-top: 1px solid rgba(126,200,240,0.2);
+  margin: 2em 0;
+}
+
+/* 連結/選項按鈕 */
+tw-link, a {
+  display: block !important;
+  background: linear-gradient(135deg, rgba(13,53,128,0.8) 0%, rgba(26,74,158,0.9) 100%) !important;
+  border: 1px solid rgba(126,200,240,0.45) !important;
+  border-radius: 8px !important;
+  padding: 14px 22px !important;
+  margin: 10px 0 !important;
+  color: #d0eaff !important;
+  text-decoration: none !important;
+  font-size: 0.8em !important; /* 原 1em -> 縮小後 0.8em */
+  line-height: 1.5 !important;
+  cursor: pointer !important;
+  transition: all 0.25s ease !important;
+  text-align: left !important;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.07) !important;
+}
+
+tw-link:hover, a:hover {
+  background: linear-gradient(135deg, rgba(26,74,158,0.95) 0%, rgba(74,120,200,0.95) 100%) !important;
+  border-color: var(--blue-glow) !important;
+  color: #fff !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 4px 20px rgba(74,144,217,0.4), inset 0 1px 0 rgba(255,255,255,0.1) !important;
+}
+
+/* 選項區塊 */
+.choices {
+  margin-top: 2em;
+}
+
+.choice-label {
+  font-size: 0.656em; /* 原 0.82em -> 縮小後 0.656em */
+  color: var(--blue-glow);
+  letter-spacing: 0.15em;
+  margin-bottom: 0.8em;
+  opacity: 0.75;
+}
+
+/* 角色名牌 */
+.char-name {
+  font-weight: 700;
+  color: var(--gold);
+  font-size: 0.76em; /* 原 0.95em -> 縮小後 0.76em */
+}
+
+/* 結局標題 */
+.ending-title {
+  font-family: 'ZCOOL XiaoWei', serif;
+  font-size: 1.92em; /* 原 2.4em -> 縮小後 1.92em */
+  color: var(--gold);
+  text-align: center;
+  text-shadow: 0 0 30px rgba(245,200,66,0.6);
+  margin-bottom: 0.5em;
+}
+
+.ending-badge {
+  display: block;
+  text-align: center;
+  font-size: 0.68em; /* 原 0.85em -> 縮小後 0.68em */
+  color: var(--blue-glow);
+  letter-spacing: 0.2em;
+  margin-bottom: 2em;
+}
+
+/* 輸入框 */
+tw-input {
+  background: rgba(13,43,94,0.8) !important;
+  border: 1px solid rgba(126,200,240,0.5) !important;
+  border-radius: 6px !important;
+  color: #fff !important;
+  padding: 10px 16px !important;
+  font-family: 'Noto Serif TC', serif !important;
+  font-size: 0.88em !important; /* 原 1.1em -> 縮小後 0.88em */
+  width: 200px !important;
+  text-align: center !important;
+}
+
+/* 貓爪分隔 */
+.paw {
+  text-align: center;
+  font-size: 1.12em; /* 原 1.4em -> 縮小後 1.12em */
+  margin: 1.5em 0;
+  opacity: 0.5;
+}
+
+/* 浮動星星背景效果 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.55; }
+}
+
+/* 過場動畫 */
+tw-passage {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
